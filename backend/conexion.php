@@ -19,12 +19,12 @@
 
     try {
         $pdo= new PDO($dns, $user, $password, $opciones);
-    } catch (PDOException $e) {
+} catch (PDOException $e) {
         http_response_code(500);
         header('Content-Type: application/json; charset=utf-8');
         echo json_encode([
             'estado' => 'error',
-            'mensaje' => 'Error de conexión a la base de datos'
+            'mensaje' => 'Fallo la conexion: ' . $e->getMessage()
         ]);
         exit;
     }
