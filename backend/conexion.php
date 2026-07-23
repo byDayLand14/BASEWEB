@@ -1,10 +1,11 @@
 <?php
     declare(strict_types=1);
 
-    $host = 'localhost';
-    $user = 'root';
-    $password = '';
-    $database = 'bdventas';
+    // Reemplaza estos 4 valores con los de Clever Cloud:
+    $host = 'bxxx...-mysql.services.clever-cloud.com'; // Copia aquí el "Host"
+    $user = 'uxxx...';                                 // Copia aquí el "User"
+    $password = 'pxxx...';                             // Copia aquí el "Password"
+    $database = 'bxxx...';                             // Copia aquí el "Database Name"
     $charset = 'utf8mb4';
 
     $dns = "mysql:host=$host;dbname=$database;charset=$charset";
@@ -27,5 +28,4 @@
         ]);
         exit;
     }
-
 ?>
